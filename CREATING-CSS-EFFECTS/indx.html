@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Creating Effects with CSS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li class="drop">
+                <a href="#">Images</a>
+
+                <div class="rollover-menu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- IMAGES -->
+    <section class="image-section">
+
+        <!-- IMAGE ONE -->
+        <div class="image-container" id="image1">
+            <img src="images/japan-one.jpg"
+                 alt="A beautiful view of Japan">
+
+            <div class="overlay">
+                <div class="overlay-text">
+                    Explore Japan
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE TWO -->
+        <div class="image-container zoom" id="image2">
+            <img src="images/japan-two.jpg"
+                 alt="A beautiful Japanese landscape">
+        </div>
+
+        <!-- IMAGE THREE -->
+        <div class="image-container circle" id="image3">
+            <img src="images/japan-three.jpg"
+                 alt="Beautiful Japanese scenery">
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-text">
+            <p>The Tech Academy &copy;</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

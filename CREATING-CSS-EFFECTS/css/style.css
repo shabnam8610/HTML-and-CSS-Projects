@@ -1,0 +1,332 @@
+/* GENERAL PAGE STYLES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    font-family: Calibri, sans-serif;
+}
+
+
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #363636;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    position: relative;
+}
+
+a {
+    display: block;
+    width: 100px;
+    padding: 30px;
+
+    font-family: Calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.4s ease-in,
+        color 0.4s ease-in;
+}
+
+
+/* NAVBAR ROLLOVER EFFECT */
+
+.nav-bar a:hover,
+.drop:hover > a {
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+
+    transition: background-color 0.3s ease-in;
+}
+
+
+/* DROPDOWN MENU */
+
+.rollover-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 160px;
+
+    background-color: white;
+
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+    z-index: 5;
+}
+
+
+/* DROPDOWN MENU LINKS */
+
+.rollover-menu a {
+    width: auto;
+    padding: 15px 30px;
+
+    color: rgb(49, 49, 49);
+    background-color: white;
+
+    font-size: 18px;
+    text-align: left;
+    text-transform: none;
+
+    box-shadow: none;
+}
+
+
+/* DISPLAYS THE MENU WHEN HOVERING */
+
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+
+/* DROPDOWN LINK HOVER EFFECT */
+
+.rollover-menu a:hover {
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+}
+
+
+/* ==============================
+   IMAGE SECTION
+   ============================== */
+
+.image-section {
+    padding: 60px 20px;
+}
+
+.image-container {
+    position: relative;
+
+    width: 70%;
+    max-width: 900px;
+
+    margin: 0 auto 60px;
+
+    overflow: hidden;
+
+    border: 6px solid white;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.image-container img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==============================
+   IMAGE ONE OVERLAY EFFECT
+   ============================== */
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.overlay-text {
+    color: white;
+
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+    transform: translateY(20px);
+
+    transition: transform 0.5s ease;
+}
+
+
+/* DISPLAYS OVERLAY WHEN HOVERING */
+
+#image1:hover .overlay {
+    opacity: 1;
+}
+
+#image1:hover .overlay-text {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   IMAGE TWO ZOOM EFFECT
+   ============================== */
+
+.zoom img {
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.zoom:hover img {
+    transform: scale(1.15);
+    filter: brightness(70%);
+}
+
+
+/* ==============================
+   IMAGE THREE CIRCLE EFFECT
+   ============================== */
+
+.circle {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* SETS UP THE BURST SHAPE */
+
+.circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+
+    background-color: rgba(228, 159, 0, 0.65);
+
+    opacity: 0;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* TRIGGERS THE CIRCLE ANIMATION */
+
+.circle:hover::before {
+    animation: circle-burst 1s ease-out;
+}
+
+
+/* CIRCLE-BURST ANIMATION */
+
+@keyframes circle-burst {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 160%;
+        height: 250%;
+        opacity: 0;
+    }
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    padding: 25px;
+
+    background-color: #363636;
+    color: white;
+
+    text-align: center;
+}
+
+.footer-text p {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media screen and (max-width: 600px) {
+
+    a {
+        width: auto;
+        padding: 20px;
+
+        font-size: 17px;
+    }
+
+    .rollover-menu a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .image-section {
+        padding: 40px 10px;
+    }
+
+    .image-container {
+        width: 92%;
+        margin-bottom: 40px;
+    }
+
+    .overlay-text {
+        font-size: 25px;
+    }
+}
