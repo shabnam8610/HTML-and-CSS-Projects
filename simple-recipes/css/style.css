@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;800&display=swap');
+
+:root {
+  --green: rgb(1, 128, 106);
+  --mint: rgb(149, 238, 223);
+  --pink: rgb(247, 177, 188);
+  --white: #fff;
+  --dark: #263238;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaf8;
+}
+
+/* NAVBAR */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: var(--green);
+  border-bottom: 5px solid var(--pink);
+}
+
+.nav-bar a {
+  display: block;
+  width: 160px;
+  padding: 20px;
+  color: var(--pink);
+  font-family: 'Josefin Slab', serif;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .3s ease-in;
+}
+
+.nav-bar a:hover {
+  color: white;
+  background-color: var(--mint);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .7);
+}
+
+.drop { position: relative; }
+
+.rollover-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+}
+
+.rollover-menu a {
+  width: 230px;
+  color: var(--green);
+  font-size: 20px;
+  text-align: left;
+}
+
+.drop:hover .rollover-menu { display: block; }
+
+/* HEADER */
+header {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(rgba(1,128,106,.62), rgba(1,128,106,.62)),
+              url('../images/header.jpeg') center/cover no-repeat;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  font-size: clamp(52px, 8vw, 100px);
+  text-shadow: 3px 3px 8px rgba(0,0,0,.4);
+}
+
+main { width: min(1200px, 92%); margin: auto; }
+h2, h3, h4 { font-family: 'Josefin Slab', serif; }
+h2 { color: var(--green); font-size: 38px; text-align: center; }
+h3 { font-size: 27px; }
+h4 { margin: 12px 0 3px; color: var(--green); font-size: 20px; }
+p { line-height: 1.6; }
+
+.featured-recipe, .recipes, .contact-section { padding: 50px 0; scroll-margin-top: 85px; }
+.featured-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.featured-content img, .recipe-card img { width: 100%; display: block; object-fit: cover; }
+.featured-content img { min-height: 420px; border-radius: 6px; }
+
+.recipe-button,
+input[type="submit"] {
+  display: inline-block;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 25px;
+  color: white;
+  background: var(--green);
+  font: 800 19px 'Josefin Slab', serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.recipe-button:hover, input[type="submit"]:hover { color: var(--dark); background: var(--mint); }
+
+.recipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.recipe-card { padding: 20px; background: white; border-bottom: 5px solid var(--pink); box-shadow: 0 5px 16px rgba(0,0,0,.13); scroll-margin-top: 85px; }
+.recipe-card img { height: 220px; }
+.recipe-card h3 { min-height: 64px; text-align: center; }
+
+/* CONTACT */
+.contact-section h3 { color: var(--green); text-align: center; }
+form { max-width: 760px; margin: auto; padding: 30px; background: white; box-shadow: 0 5px 16px rgba(0,0,0,.13); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: 100%; margin-bottom: 16px; border: 2px solid #ddd; border-radius: 4px; padding: 13px; font: inherit;
+}
+input:focus, textarea:focus { outline: 2px solid var(--mint); border-color: var(--green); }
+.subscription { display: block; margin: 2px 0 18px; }
+textarea { min-height: 150px; resize: vertical; }
+
+footer {
+  width: 100%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-color: var(--green);
+  border-top: 5px solid var(--pink);
+}
+
+@media (max-width: 760px) {
+  .nav-bar a { width: auto; padding: 16px 12px; font-size: 20px; }
+  .rollover-menu a { width: 210px; }
+  .featured-content, .recipe-grid, .form-row { grid-template-columns: 1fr; }
+  .featured-content img { min-height: 280px; }
+  .recipe-card h3 { min-height: 0; }
+}

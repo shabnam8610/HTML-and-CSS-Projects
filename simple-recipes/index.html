@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Recipes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="drop">
+        <a href="#recipes">Recipes</a>
+        <div class="rollover-menu">
+          <a href="#featured">Featured Recipe</a>
+          <a href="#pasta">Pasta</a>
+          <a href="#chicken">Chicken</a>
+          <a href="#pork">Pork</a>
+          <a href="#biscuits">Biscuits</a>
+          <a href="#fish">Fish</a>
+          <a href="#dessert">Dessert</a>
+        </div>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Simple Recipes</h1>
+  </header>
+
+  <!-- RECIPES -->
+  <main id="recipes">
+    <section>
+      <div id="featured" class="featured-recipe">
+        <h2>Featured Recipe</h2>
+        <div class="featured-content">
+          <div><img src="images/skillet-pizza.jpeg" alt="Deep Dish Skillet Pizza"></div>
+          <div>
+            <h3>Deep Dish Skillet Pizza</h3>
+            <h4>Prep Time:</h4>
+            <p>30–40 minutes</p>
+            <h4>Level:</h4>
+            <p>medium</p>
+            <p>Deep dish pizza has got a lot going for it: a thick crust that's tender and chewy on the inside, but nicely crisped on the outside; a little extra room for piling on the toppings; and, deep dish is less needy than its thin crust style counterpart, which requires some care when rolling and stretching. Here, you just push the dough into the skillet and you're cooking! Save the leftovers for lunch!</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipes">
+        <h2>Recipes</h2>
+        <div class="recipe-grid">
+          <article id="pasta" class="recipe-card">
+            <h3>Saucy Tortelloni Parm</h3>
+            <img src="images/tortelloni.jpeg" alt="Saucy Tortelloni Parm">
+            <h4>Prep Time:</h4><p>20–30 minutes</p>
+            <h4>Level:</h4><p>easy</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+          <article id="chicken" class="recipe-card">
+            <h3>Mediterranean Chicken Thighs</h3>
+            <img src="images/chicken.jpeg" alt="Mediterranean Chicken Thighs">
+            <h4>Prep Time:</h4><p>20–30 minutes</p>
+            <h4>Level:</h4><p>easy</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+          <article id="pork" class="recipe-card">
+            <h3>Crispy Pork Katsu &amp; Rice</h3>
+            <img src="images/pork.jpeg" alt="Crispy Pork Katsu and Rice">
+            <h4>Prep Time:</h4><p>20–30 minutes</p>
+            <h4>Level:</h4><p>medium</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+          <article id="biscuits" class="recipe-card">
+            <h3>Fluffy Homemade Biscuits</h3>
+            <img src="images/biscuits.jpeg" alt="Fluffy Homemade Biscuits">
+            <h4>Prep Time:</h4><p>25–35 minutes</p>
+            <h4>Level:</h4><p>easy</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+          <article id="fish" class="recipe-card">
+            <h3>Herb-Baked Fish</h3>
+            <img src="images/fish.jpeg" alt="Herb-Baked Fish">
+            <h4>Prep Time:</h4><p>20–25 minutes</p>
+            <h4>Level:</h4><p>easy</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+          <article id="dessert" class="recipe-card">
+            <h3>Chocolate Dessert</h3>
+            <img src="images/dessert.jpeg" alt="Chocolate Dessert">
+            <h4>Prep Time:</h4><p>40–50 minutes</p>
+            <h4>Level:</h4><p>medium</p>
+            <a class="recipe-button" href="#">Recipe</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <h3>Want more information about our recipes?<br>Contact us below!</h3>
+      <form>
+        <div class="form-row">
+          <input type="text" name="firstName" placeholder="First Name">
+          <input type="text" name="lastName" placeholder="Last Name">
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email">
+          <input type="tel" name="phone" placeholder="Phone Number">
+        </div>
+        <label class="subscription">
+          <input type="checkbox" name="subscription">
+          Subscribe for weekly recipes!
+        </label>
+        <textarea name="message" placeholder="Type message here..."></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 Simple Recipes</p></footer>
+</body>
+</html>
