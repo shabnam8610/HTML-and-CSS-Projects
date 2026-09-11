@@ -156,3 +156,20 @@ footer {
   .featured-content img { min-height: 280px; }
   .recipe-card h3 { min-height: 0; }
 }
+
+.about-section {
+    margin-top: 30px;
+    padding: 50px 8%;
+    scroll-margin-top: 85px;
+    background-color: white;
+    border-top: 5px solid rgb(247, 177, 188);
+    border-bottom: 5px solid rgb(247, 177, 188);
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 850px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
