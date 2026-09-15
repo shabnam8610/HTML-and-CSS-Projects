@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850">
+  <defs><linearGradient id="g" y2="1"><stop stop-color="#f3c861"/><stop offset="1" stop-color="#8c260c"/></linearGradient></defs><rect width="600" height="850" fill="url(#g)"/>
+  <circle cx="300" cy="315" r="185" fill="none" stroke="#5b1608" stroke-width="18"/><path d="M110 675Q300 410 490 675M155 680h290" fill="none" stroke="#2a120d" stroke-width="35"/><circle cx="215" cy="690" r="63" fill="none" stroke="#f6d27b" stroke-width="15"/><circle cx="385" cy="690" r="63" fill="none" stroke="#f6d27b" stroke-width="15"/>
+  <text x="300" y="145" text-anchor="middle" fill="#4c1207" font-family="Georgia,serif" font-size="98" font-weight="900">BEN-HUR</text><text x="300" y="800" text-anchor="middle" fill="#fff1bd" font-family="Georgia,serif" font-size="28" letter-spacing="8">A TIMELESS EPIC</text>
+</svg>

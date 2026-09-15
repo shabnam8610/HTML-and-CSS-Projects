@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280">
+  <rect width="900" height="280" rx="24" fill="#240000" opacity=".9"/>
+  <path d="M90 210V82h720v128" fill="none" stroke="#edc003" stroke-width="8"/>
+  <path d="M135 80l55-38 55 38 55-38 55 38 55-38 55 38 55-38 55 38 55-38 55 38 55-38 55 38" fill="none" stroke="#edc003" stroke-width="8"/>
+  <text x="450" y="151" text-anchor="middle" fill="#edc003" font-family="Georgia,serif" font-size="70" font-weight="700">ACADEMY</text>
+  <text x="450" y="210" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="44" letter-spacing="13">CINEMAS</text>
+</svg>
